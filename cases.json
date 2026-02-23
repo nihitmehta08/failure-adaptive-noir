@@ -1,0 +1,127 @@
+{
+  "cases": [
+    {
+      "title": "The Cake Case",
+      "start": "n1",
+      "nodes": {
+        "n1": {
+          "speaker": "Narrator",
+          "tag": "Assess",
+          "text": "The cake box sits empty. When did this happen?",
+          "choices": [
+            { "label": "Dinner", "next": "n2_dinner" },
+            { "label": "Lunch", "next": "n2_lunch" }
+          ]
+        },
+        "n2_dinner": {
+          "speaker": "Helper: Dietitian",
+          "tag": "Assess",
+          "text": "Dinner cases usually mean fatigue or pressure. What drove it?",
+          "choices": [
+            { "label": "Social pressure", "next": "n3_social" },
+            { "label": "Stress", "next": "n3_stress" }
+          ]
+        },
+        "n2_lunch": {
+          "speaker": "Helper: Analyst",
+          "tag": "Assess",
+          "text": "Midday tells a different story. What happened?",
+          "choices": [
+            { "label": "I skipped breakfast", "next": "n3_hunger" },
+            { "label": "I felt overwhelmed", "next": "n3_stress" }
+          ]
+        },
+        "n3_social": {
+          "speaker": "Narrator",
+          "tag": "Advise",
+          "text": "This was about belonging, not cake. Plan a portion boundary next time.",
+          "choices": [
+            { "label": "Agree to one plated portion", "next": "n4" }
+          ]
+        },
+        "n3_stress": {
+          "speaker": "Narrator",
+          "tag": "Advise",
+          "text": "Stress leaves fingerprints on every case. We reduce damage, not seek perfection.",
+          "choices": [
+            { "label": "Agree to 10 minute walk before next meal", "next": "n4" }
+          ]
+        },
+        "n3_hunger": {
+          "speaker": "Narrator",
+          "tag": "Advise",
+          "text": "Under-fueling creates rebound cases. Add protein earlier tomorrow.",
+          "choices": [
+            { "label": "Agree to protein breakfast", "next": "n4" }
+          ]
+        },
+        "n4": {
+          "speaker": "Helper: Planner",
+          "tag": "Assist",
+          "text": "Pick one support tool.",
+          "choices": [
+            { "label": "Write a boundary script", "next": "n5" },
+            { "label": "Set reminder for protein", "next": "n5" }
+          ]
+        },
+        "n5": {
+          "speaker": "Narrator",
+          "tag": "Arrange",
+          "text": "Case filed. Monitor hunger and stress tomorrow morning.",
+          "choices": [
+            { "label": "Close Case", "next": "END" }
+          ]
+        }
+      }
+    },
+
+    {
+      "title": "The Late Night Spiral",
+      "start": "m1",
+      "nodes": {
+        "m1": {
+          "speaker": "Narrator",
+          "tag": "Assess",
+          "text": "The kitchen light was on past midnight. What was the signal?",
+          "choices": [
+            { "label": "I was exhausted", "next": "m2_sleep" },
+            { "label": "I felt lonely", "next": "m2_lonely" }
+          ]
+        },
+        "m2_sleep": {
+          "speaker": "Helper: Sleep Whisperer",
+          "tag": "Advise",
+          "text": "Sleep debt masquerades as hunger. We aim for containment.",
+          "choices": [
+            { "label": "Agree to brush teeth and close kitchen", "next": "m3" }
+          ]
+        },
+        "m2_lonely": {
+          "speaker": "Helper: Analyst",
+          "tag": "Advise",
+          "text": "Loneliness distorts hunger signals. We replace the pattern.",
+          "choices": [
+            { "label": "Agree to text a friend instead", "next": "m3" }
+          ]
+        },
+        "m3": {
+          "speaker": "Narrator",
+          "tag": "Assist",
+          "text": "Choose a structural move.",
+          "choices": [
+            { "label": "Move snacks out of bedroom", "next": "m4" },
+            { "label": "Set sleep alarm", "next": "m4" }
+          ]
+        },
+        "m4": {
+          "speaker": "Narrator",
+          "tag": "Arrange",
+          "text": "Signal to watch: bedtime consistency tomorrow.",
+          "choices": [
+            { "label": "Close Case", "next": "END" }
+          ]
+        }
+      }
+    }
+  ]
+}
