@@ -1,4 +1,4 @@
-{
+  {
   "cases": [
     {
       "title": "The Cake Case",
@@ -74,7 +74,6 @@
         }
       }
     },
-
     {
       "title": "The Late Night Spiral",
       "start": "m1",
@@ -99,7 +98,7 @@
         "m2_lonely": {
           "speaker": "Helper: Analyst",
           "tag": "Advise",
-          "text": "Loneliness distorts hunger signals. We replace the pattern.",
+          "text": "Loneliness distorts hunger signals. Replace the pattern.",
           "choices": [
             { "label": "Agree to text a friend instead", "next": "m3" }
           ]
